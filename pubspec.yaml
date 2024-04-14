@@ -20,7 +20,26 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^3.0.0
 
+flutter_assets_generator:
+  # Optional. Sets the directory of generated localization files. Provided value should be a valid path on lib dir. Default: generated
+  output_dir: genRes
+  # Optional. Sets whether utomatic monitoring of file changes. Default: true
+  auto_detection: true
+  # Optional. Sets file name conversion rules. Default: true
+  named_with_parent: true
+  # Optional. Sets the name for the generated localization file. Default: assets
+  output_filename: generated_assets
+  # Optional. Sets the name for the generated localization class. Default: Assets
+  class_name: Assets
+  # Optional. Sets the filename split pattern for filename split. Default: [-_]
+  filename_split_pattern: "[-_]"
+  # Optional. Configuring ignore paths. Default: [],e.g: ["assets/fonts", "assets/images/dark", ...]
+  path_ignore: []
+
 flutter:
 
   uses-material-design: true
 
+
+  assets:
+    - assets/
